@@ -175,7 +175,13 @@ http.listen(app.get('port'), function(){ console.log('listening on ' + app.get('
 	}
 	function gameover(person){
 		person.isdead = true	
-		
+		person.speed.x = 0
+        person.speed.y = 0
+        person.up = false
+        person.down = false
+        person.left = false
+        person.right = false
+        
 		var name = person.id + '-tombstone'
 		draw[name] = {}
 		draw[name].size = person.size
